@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/social_feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title> 主页</title>
+    <title>Url展示界面</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../static/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../static/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="../static/css/animate.min.css" rel="stylesheet">
+    <link href="../static/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+       
+
+            <div class="row">
+                <div class="ibox">
+                    <div class="ibox-content text-center">
+
+                        <h3 class="m-b-xxs">url界面</h3>
+                    </div>
+
+                </div>
+                {{range .words}}
+                <div class="social-feed-box">
+                    <div class="social-avatar">
+                        <div class="media-body">
+                            <a href="/urls?Url={{.Url}}"  target="_blank">
+                                       {{.Title}}
+                            </a>
+                            <small class="text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="social-body">
+                        <P>
+                            {{.Concent}}
+                        </P>
+                        <a href="/urls?Url={{.Url}}"  target="_blank">{{.Url}}</a>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../static/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../static/js/content.min.js?v=1.0.0"></script>
+    <div class="gohome"><a class="animated bounceInUp" href="./" title="返回首页"><i class="fa fa-home"></i></a></div>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/social_feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+</html>

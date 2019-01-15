@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+	   <script src='../static/js/echarts.js'></script>
+	   <script src='../static/js/jquery.min.js'></script>
+       <link rel="shortcut icon" href="favicon.ico"> <link href="../static/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+       <link href="../static/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+       <link href="../static/css/animate.min.css" rel="stylesheet">
+       <link href="../static/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+myChart.showLoading();
+myChart.showLoading();
+$.get('../static/data/webkit-dep.json', function (webkitDep) {
+    myChart.hideLoading();
+
+    option = {
+        legend: {
+            data: ['A', 'B', 'C', 'D', 'E']
+        },
+        series: [{
+            type: 'graph',
+            layout: 'force',
+            animation: false,
+            label: {
+                normal: {
+                    position: 'right',
+                    formatter: '{b}'
+                }
+            },
+            draggable: true,
+            data: webkitDep.nodes.map(function (node, idx) {
+                node.id = idx;
+                return node;
+            }),
+            categories: webkitDep.categories,
+            force: {
+                // initLayout: 'circular'
+                // repulsion: 20,
+                edgeLength: 5,
+                repulsion: 20,
+                gravity: 0.2
+            },
+            edges: webkitDep.links
+        }]
+    };
+
+    myChart.setOption(option);
+});
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+
+   </body>
+</html>

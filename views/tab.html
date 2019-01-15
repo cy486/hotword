@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>选项</title>
+    <link rel="shortcut icon" href="../static/favicon.ico"> <link href="../static/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../static/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="../static/css/animate.min.css" rel="stylesheet">
+    <link href="../static/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <script src='../static/js/jquery.min.js'></script>
+</head>
+	<body>
+
+	<div class="ibox-content">
+                    <h1 align="center">
+                       请选择热词的首字母
+                    </h1>
+                    <h3 class="font-bold">热词首字母列表</h3>
+                    <button class="btn btn-primary dim btn-large-dim" type="button" name="A" id="bt">A  </button>
+                    <button class="btn btn-primary dim btn-large-dim" type="button" name="B" id="bt">B  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="C" id="bt">C  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="D" id="bt">D  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="E">E  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="F">F  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="G">G  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="H">H  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="I">I  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="J">J  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="K">K  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="L">L  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="M">M  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="F">M  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="N">N  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="O">O  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="P">P  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="Q">Q  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="R">R  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="S">S  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="T">T  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="W">W  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="V">V  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="U">U  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="X">X  </button>
+					<button class="btn btn-primary dim btn-large-dim" type="button" name="Y">Y  </button>
+                    <button class="btn btn-primary dim btn-large-dim" type="button" name="Z">Z  </button>
+                </div>
+			<script type="text/javascript">
+            $(function(){
+             $("button").click(function() {
+                window.location.href="/find?is_a="+this.name;
+                  });
+                 })
+        </script>
+	</body>
+</html>
